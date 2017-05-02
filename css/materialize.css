@@ -3343,25 +3343,27 @@ nav ul a span.badge {
 
 .container {
   margin: 0 auto;
-  max-width: 1280px;
-  width: 90%;
+  max-width: 1400px;
+  width: 100%;
 }
 
 @media only screen and (min-width: 601px) {
   .container {
-    width: 85%;
+    width: 100%;
   }
 }
 
 @media only screen and (min-width: 993px) {
   .container {
-    width: 70%;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
 .container .row {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
+  margin-left: 2.75rem;
+  margin-right: 2.75rem;
 }
 
 .section {
@@ -4219,6 +4221,8 @@ nav i.material-icons {
 nav .nav-wrapper {
   position: relative;
   height: 100%;
+  padding-left: 20px;
+  padding-right: 11px;
 }
 
 @media only screen and (min-width: 993px) {
@@ -4464,7 +4468,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 h1 {
   font-size: 4.2rem;
   line-height: 110%;
-  margin: 2.1rem 0 1.68rem 0;
+  margin-top: 0px;
 }
 
 h2 {

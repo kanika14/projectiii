@@ -3,16 +3,20 @@ $(document).ready(function(){
 		
 	var name = $("#username").val();
 	var pass = $("#password").val();
+	var email = $("#email").val();
+	var phone = $("#phone").val();
 
 	$.ajax({
 		method: "post",
 		url : "sign.php",
 		data : {
 			name : name,
-			pass : pass
+			pass : pass,
+			email : email,
+			phone : phone
 		},
 		success : function(data)
-		{
+		{	
 			window.location.href = 'welcome.php';
 		}
 	});
@@ -54,7 +58,7 @@ $('document').ready(function() {
 			},
 			success : function(response){						
 				if(response=="ok"){									
-					$("#login_button").html('<img src="ajax-loader.gif" /> &nbsp; Signing In ...');
+					$("#login_button").html('Signing In ...');
 					setTimeout(' window.location.href = "welcome.php"; ',4000);
 				} else {									
 					$("#error").fadeIn(1000, function(){						

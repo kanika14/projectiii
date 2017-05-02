@@ -46,3 +46,11 @@ a:focus, a:hover {
     color: #fff !important; 
     text-decoration: none !important;
 }
+
+.background{
+	    background: linear-gradient(50deg, HSLA(205, 62%, 44%, 1), #F62D51);
+}
+
+.customdropdown{
+	top: 60px !important;
+}

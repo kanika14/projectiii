@@ -1,6 +1,5 @@
 <?php
 session_start();
-print_r($_SESSION);
 if(!isset($_SESSION['user_session'])){
 	header("Location: index.php");
 }
@@ -11,22 +10,41 @@ $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($c
 $row = mysqli_fetch_assoc($resultset);
 include('container.php');
 ?>
-<div class="container">    
-	<div id="navbar" class="navbar-collapse collapse">
-	 <ul class="nav navbar-nav navbar-right">            
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-			  <span class="glyphicon glyphicon-user"></span>&nbsp;Hi <?php echo $row['name']; ?>&nbsp;<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;View Profile</a></li>
-                <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign Out</a></li>
-              </ul>
-            </li>
-          </ul>
-	</div>	
-	<div class='alert alert-success'>
-		<button class='close' data-dismiss='alert'>&times;</button>
-		Hello, <br><br>Welcome to the members page.<br><br>
-    </div>		
+
+
+<div class="container">
+  <div class="row">
+  <div class="col s3">
+      <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="img/download.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4"><?php echo $row['name']; ?><i class="material-icons right">more_vert</i></span>
+      <p><a href="#">This is a link</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><?php echo $row['name']; ?><i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="row"> 
+  <div class="col s4">
+     <form action="#">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>Upload</span>
+        <input type="file" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+      </div>
+    </div>
+  </form>
+  </div>
+  </div>
 </div>
 <?php include('footer.php');?>
