@@ -29,17 +29,15 @@ include_once "inc/header.php";
 					<label for="icon_telephone" data-error="wrong" data-success="right">Password</label>
         		</div>
         		<div class="input-field col s6">
-        		<p>You Are a ...  <br>
-				      <input name="group1" type="radio" id="test1" />
-				      <label for="test1">Red</label>
-				    </p>
-				    <p>
-				      <input name="group1" type="radio" id="test2" />
-				      <label for="test2">Yellow</label>
-				    </p>
-				</div> 
+        		   <select class="option" id="userType">
+        		     <option value="" disabled selected>You are a</option>
+        		     <option value="staff">Staff Member</option>
+        		     <option value="student">Student</option>
+        		   </select>
+        		 </div>
+
 				<div class="input-field col s12">
-					<button class="waves-effect waves-light btn" type="submit" name="register" id="register"><i class="material-icons left">send</i>Register</button>
+					<button class="waves-effect waves-light btn" type="submit" name="register" id="register"><i class="material-icons right">send</i>Register</button>
 				</div>
 	</div>
 </div>

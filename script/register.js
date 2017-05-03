@@ -5,7 +5,9 @@ $(document).ready(function(){
 	var pass = $("#password").val();
 	var email = $("#email").val();
 	var phone = $("#phone").val();
+	var type = $("#userType").val();
 
+	
 	$.ajax({
 		method: "post",
 		url : "sign.php",
@@ -13,7 +15,8 @@ $(document).ready(function(){
 			name : name,
 			pass : pass,
 			email : email,
-			phone : phone
+			phone : phone,
+			type : type
 		},
 		success : function(data)
 		{	
